@@ -3,7 +3,7 @@ import './Favorite.css';
 import space from '../assets/img/space.png';
 import travel from '../assets/img/trevel.png';
 import mood from '../assets/img/mood.png';
-import hobby from '../assets/img/hobby.png';
+import hobby from '../assets/img/hobby.PNG';
 
 // 플레이스홀더 이미지 혹은 에셋
 const categories = [

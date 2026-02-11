@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './Contact.css';
-import contact_video from '../assets/video/contact_video.mp4';
+import contact_video from '../assets/video/contact_video.MP4';
 
 const Contact = () => {
     const sectionRef = useRef(null);
