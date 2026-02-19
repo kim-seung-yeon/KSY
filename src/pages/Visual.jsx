@@ -4,6 +4,7 @@ import './Visual.css';
 const Visual = () => {
     const [isVisible, setIsVisible] = useState(false);
     const [isAssembled, setIsAssembled] = useState(false);
+    const [isTextVisible, setIsTextVisible] = useState(false);
     const [isShrinking, setIsShrinking] = useState(false);
     const [scale, setScale] = useState(1);
 
@@ -17,6 +18,7 @@ const Visual = () => {
         window.addEventListener('resize', handleResize);
 
         const timer = setTimeout(() => setIsVisible(true), 100);
+        const textTimer = setTimeout(() => setIsTextVisible(true), 1500);
         const assembleTimer = setTimeout(() => setIsAssembled(true), 3500);
 
         document.body.style.overflow = 'hidden';
@@ -26,6 +28,7 @@ const Visual = () => {
 
         return () => {
             clearTimeout(timer);
+            clearTimeout(textTimer);
             clearTimeout(assembleTimer);
             clearTimeout(unlockTimer);
             document.body.style.overflow = 'auto';
@@ -56,9 +59,8 @@ const Visual = () => {
                 <div className="line h-line lh-4"></div>
             </div>
 
-            <div className="text-container">
+            <div className={`text-container ${isTextVisible ? 'show-text' : ''}`}>
                 <div className="assembly-wrapper" style={{ transform: `translate(-50%, -50%) scale(${scale})` }}>
-                    {/* Fixed X-positions for perfect centering */}
                     <div className="fragment-mask p-mask"><div className="text-fragment p-char allura">P</div></div>
                     <div className="fragment-mask ort-mask"><div className="text-fragment ort-chars neue">ort</div></div>
                     <div className="fragment-mask f-mask"><div className="text-fragment f-char allura">f</div></div>
