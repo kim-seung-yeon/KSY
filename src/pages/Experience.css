@@ -43,22 +43,36 @@ section.experience {
 
 .exp-subtitle-wrapper {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     margin-top: 20px;
     width: fit-content;
 }
 
 .exp-subtitle {
     font-size: clamp(12px, 0.94vw, 18px);
-    color: #FFCC33;
+    color: #fe7844;
     margin: 0;
-    border-bottom: 2px solid #FFCC33;
+    border-bottom: 2px solid #fe7844;
     padding-bottom: 5px;
     /* Initial state */
     opacity: 0;
     transform: translateY(40px);
     transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
     transition-delay: 0.3s;
+}
+
+.exp-square-dot {
+    width: clamp(4px, 0.4vw, 8px);
+    height: clamp(4px, 0.4vw, 8px);
+    background-color: #fe7844;
+    margin-left: clamp(2px, 0.2vw, 4px);
+    /* Aligns the vertical center of the box with the 2px border */
+    margin-bottom: calc(-1 * (clamp(4px, 0.4vw, 8px) / 2) + 1px);
+    /* Initial state */
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    transition-delay: 0.4s;
 }
 
 /* Animation Trigger */
@@ -148,49 +162,44 @@ section.experience {
 }
 
 .card-title {
-    font-size: clamp(15px, 1.15vw, 22px);
+    font-size: clamp(14px, 2vw, 24px);
     font-weight: bold;
     color: #fff;
     white-space: pre-wrap;
-    line-height: 1.3;
+    line-height: 1.2;
     transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
     position: relative;
     z-index: 2;
-    transform: translateY(20px);
-    /* 설명글 공간만큼 처음에 아래로 내려서 중앙 느낌 유지 */
+    transform: translateY(0);
 }
 
 /* 설명글: Relative position to allow natural flow */
 .card-desc {
-    position: relative;
+    position: absolute;
+    bottom: 20%;
     width: 100%;
-    padding: 0 20px;
-    margin-top: 15px;
-    /* 간격 고정 */
-
-    font-size: clamp(12px, 0.73vw, 14px);
+    padding: 0 40px;
+    font-size: clamp(11px, 1vw, 15px);
     color: #fff;
-    line-height: 1.4;
+    line-height: 1.5;
     white-space: pre-wrap;
     font-weight: 400;
-
     opacity: 0;
-    transform: translateY(30px);
-    /* 더 아래에서 시작 */
+    transform: translateY(20px);
     transition: opacity 0.4s ease, transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
     pointer-events: none;
+    text-align: center;
+    box-sizing: border-box;
 }
 
 /* Hover Effects */
 .exp-card:hover .card-title {
-    transform: translateY(-10px);
-    /* 위로 이동 */
+    transform: translateY(-20px);
 }
 
 .exp-card:hover .card-desc {
     opacity: 1;
-    transform: translateY(-10px);
-    /* 함께 위로 이동 */
+    transform: translateY(0);
 }
 
 /* Bottom Marquee */
@@ -217,17 +226,7 @@ section.experience {
     font-weight: 200;
 }
 
-.exp-square-dot {
-    width: 8px;
-    height: 8px;
-    background-color: #FFCC33;
-    transform: translateY(-5px);
-    margin-top: 35px;
-    /* Initial state */
-    opacity: 0;
-    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-    transition-delay: 0.2s;
-}
+
 
 @keyframes scroll-text {
     0% {
@@ -305,11 +304,7 @@ section.experience {
         margin-top: 15px;
     }
 
-    .exp-square-dot {
-        width: 6px;
-        height: 6px;
-        margin-top: 30px;
-    }
+
 
     /* 2열 그리드 레이아웃 */
     .experience-content {
@@ -385,18 +380,14 @@ section.experience {
     .exp-subtitle {
         font-size: 13px;
         padding-bottom: 5px;
-        border-bottom: 1.5px solid #FFCC33;
+        border-bottom: 1.5px solid #fe7844;
     }
 
     .exp-subtitle-wrapper {
         margin-top: 12px;
     }
 
-    .exp-square-dot {
-        width: 5px;
-        height: 5px;
-        margin-top: 25px;
-    }
+
 
     .experience-content {
         gap: 15px;
@@ -413,8 +404,9 @@ section.experience {
     }
 
     .card-title {
-        font-size: 16px;
-        line-height: 1.4;
+        font-size: clamp(14px, 4vw, 18px);
+        line-height: 1.3;
+        transform: translateY(0);
     }
 
     .card-desc {
@@ -466,11 +458,7 @@ section.experience {
         margin-top: 10px;
     }
 
-    .exp-square-dot {
-        width: 4px;
-        height: 4px;
-        margin-top: 22px;
-    }
+
 
     .experience-content {
         gap: 12px;
@@ -487,8 +475,9 @@ section.experience {
     }
 
     .card-title {
-        font-size: 15px;
-        line-height: 1.3;
+        font-size: clamp(13px, 5vw, 16px);
+        line-height: 1.2;
+        transform: translateY(0);
     }
 
     .card-desc {

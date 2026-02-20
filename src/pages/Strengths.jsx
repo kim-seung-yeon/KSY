@@ -3,11 +3,19 @@ import './Strengths.css'
 
 const Strengths = () => {
     const sectionRef = useRef(null)
+    const textRef = useRef(null)
     const [windowWidth, setWindowWidth] = useState(window.innerWidth)
     const [progress, setProgress] = useState(0)
+    const [textWidth, setTextWidth] = useState(0)
 
     useEffect(() => {
-        const handleResize = () => setWindowWidth(window.innerWidth)
+        const handleResize = () => {
+            setWindowWidth(window.innerWidth)
+            if (textRef.current) {
+                setTextWidth(textRef.current.offsetWidth)
+            }
+        }
+        handleResize()
         window.addEventListener('resize', handleResize)
         return () => window.removeEventListener('resize', handleResize)
     }, [])
@@ -60,6 +68,14 @@ const Strengths = () => {
         { text: '강점발견', className: 'bottom-6', color: '#888' },
     ]
 
+    // 패딩 계산 (CSS clamp와 매칭)
+    const getPaddingX = () => {
+        if (windowWidth <= 390) return 30 // 15 * 2
+        if (windowWidth <= 480) return 40 // 20 * 2
+        const basePadding = Math.min(Math.max(windowWidth * 0.0182, 25), 35)
+        return basePadding * 2
+    }
+
     return (
         <section className="strengths" ref={sectionRef}>
             <div className="strengths-inner">
@@ -104,12 +120,12 @@ const Strengths = () => {
                             <span
                                 className={`highlight-box ${boxProgress > 0.1 ? 'expanded' : ''}`}
                                 style={{
-                                    width: `${boxProgress * Math.min(960, windowWidth * 0.9)}px`,
+                                    width: `${boxProgress * (textWidth + getPaddingX())}px`,
                                     opacity: boxProgress > 0 ? 1 : 0,
                                     '--line-width': `${boxProgress * 4}px`
                                 }}
                             >
-                                <span className="highlight-text">
+                                <span className="highlight-text" ref={textRef} style={{ position: 'relative' }}>
                                     {"모호함을 선명함으로 바꾸는".split('').map((char, i) => {
                                         const charProgress = Math.min(Math.max((boxProgress - (i * 0.03)) / 0.1, 0), 1);
                                         return (

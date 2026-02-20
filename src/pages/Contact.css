@@ -3,9 +3,22 @@
 .contact-page {
     position: relative;
     width: 100%;
-    height: 250vh;
-    /* Scroll distance */
+    height: 160vh;
+    /* Further reduced from 180vh */
     background-color: #010101;
+}
+
+/* On tablet/mobile, reduce scroll distance */
+@media (max-width: 1024px) {
+    .contact-page {
+        height: 125vh;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-page {
+        height: 105vh;
+    }
 }
 
 .contact-sticky {
@@ -18,6 +31,24 @@
     justify-content: center;
     align-items: center;
     z-index: 1;
+}
+
+@media (max-width: 1024px) {
+    .contact-sticky {
+        height: 80vh;
+        top: 10vh;
+        border-radius: 0;
+        width: 100%;
+        margin: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-sticky {
+        height: 60vh;
+        top: 20vh;
+        width: 100%;
+    }
 }
 
 .contact-bg-video {
@@ -36,7 +67,7 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: #FBFEE7;
+    background-color: #FFF8F5;
     z-index: 5;
     /* transition: height 0.1s ease-out;  Manual scroll handling is better without transition or very short one */
     will-change: height;
@@ -109,7 +140,7 @@
     justify-content: space-between;
     color: #010101;
     position: absolute;
-    bottom: 60px;
+    bottom: clamp(20px, 4vw, 60px);
     width: 100%;
     padding: 0 5%;
     box-sizing: border-box;

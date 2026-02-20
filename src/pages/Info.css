@@ -29,6 +29,7 @@ p {
     margin: 0 auto 150px auto;
     padding: 170px 0 0 0;
     width: 95%;
+    overflow: hidden;
 }
 
 .top h2 {
@@ -51,7 +52,7 @@ p {
 
 /* 박스 */
 .box {
-    background: #FFCC33;
+    background: #fe7844;
     position: absolute;
 }
 
@@ -88,11 +89,11 @@ p {
 
 .bottomline {
     position: absolute;
-    width: 406px;
+    width: 30vw;
     height: 0.5px;
     background-color: #fff;
     bottom: 5%;
-    left: 71%;
+    right: 5%;
 }
 
 /* sticky-wrap: sticky 전용 스크롤 컨테이너 */
@@ -156,12 +157,12 @@ p {
 .bottom .text .title {
     font-size: 22px;
     font-weight: bold;
-    color: #FBFEE7;
+    color: #FFF8F5;
 }
 
 .bottom .text .title i {
     font-style: italic;
-    color: #FFCC33;
+    color: #fe7844;
 }
 
 /* text-box 공통 간격 */

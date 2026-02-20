@@ -4,15 +4,10 @@ import './Experience.css';
 // 이미지 import
 // ... (rest of imports)
 import ex1 from '../assets/img/ex_1.png';
-import ex1_2 from '../assets/img/ex_1_1.png';
 import ex2 from '../assets/img/ex_2.png';
-import ex2_2 from '../assets/img/ex_2_2.png';
 import ex3 from '../assets/img/ex_3.png';
-import ex3_2 from '../assets/img/ex_3_2.png';
 import ex4 from '../assets/img/ex_4.png';
-import ex4_2 from '../assets/img/ex_4_2.png';
 import ex5 from '../assets/img/ex_5.png';
-import ex5_2 from '../assets/img/ex_5_2.png';
 
 const experiences = [
     {
@@ -22,7 +17,7 @@ const experiences = [
 협업의 즐거움을
 배울 수 있었습니다.`,
         image: ex1,
-        hoverImage: ex1_2
+        hoverImage: ex1
     },
     {
         id: 2,
@@ -31,7 +26,7 @@ const experiences = [
 대상자의 삶을 개선하는
 설계를 경험하였습니다.`,
         image: ex2,
-        hoverImage: ex2_2
+        hoverImage: ex2
     },
     {
         id: 3,
@@ -40,7 +35,7 @@ const experiences = [
 다양한 의견을 조율하며,
 커뮤니케이션 역량을 쌓았습니다.`,
         image: ex3,
-        hoverImage: ex3_2
+        hoverImage: ex3
     },
     {
         id: 4,
@@ -49,7 +44,7 @@ const experiences = [
 맞춤형 솔루션을 설계하며
 최적화된 서비스를 기획 및 진행하였습니다.`,
         image: ex4,
-        hoverImage: ex4_2
+        hoverImage: ex4
     },
     {
         id: 5,
@@ -59,7 +54,7 @@ const experiences = [
 대상자 맞춤형 사례 계획을 수립하고
 사용자 문제 해결을 위한 역량을 강화했습니다.`,
         image: ex5,
-        hoverImage: ex5_2
+        hoverImage: ex5
     }
 ];
 

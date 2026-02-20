@@ -45,7 +45,7 @@ section.strengths {
 
 .text-bg-container p {
     position: absolute;
-    font-size: 20px;
+    font-size: clamp(16px, 1.04vw, 20px);
     font-weight: 300;
     left: var(--x);
     top: var(--y);
@@ -151,7 +151,7 @@ section.strengths {
 }
 
 .intro-text h2 {
-    font-size: 85px;
+    font-size: clamp(60px, 4.43vw, 85px);
     font-weight: 700;
     line-height: 1.1;
     margin: 0;
@@ -182,7 +182,7 @@ section.strengths {
     max-width: 100%;
     overflow: hidden;
     border: none;
-    background: rgba(255, 204, 51, 0.4);
+    background: rgba(254, 120, 68, 0.4);
     white-space: nowrap;
     box-sizing: border-box;
     margin-right: 20px;
@@ -196,7 +196,7 @@ section.strengths {
     top: 0;
     width: var(--line-width, 4px);
     height: 100%;
-    background-color: #ffcc33;
+    background-color: #fe7844;
     transition: width 0.1s linear;
     /* 스크롤 반응성 향상 */
     z-index: 3;
@@ -210,13 +210,13 @@ section.strengths {
     top: 0;
     width: var(--line-width, 4px);
     height: 100%;
-    background-color: #ffcc33;
+    background-color: #fe7844;
     transition: width 0.1s linear;
     z-index: 3;
 }
 
 .highlight-text {
-    font-size: 85px;
+    font-size: clamp(60px, 4.43vw, 85px);
     font-weight: 700;
     color: #fff;
     transition: opacity 0.3s ease;
@@ -229,7 +229,7 @@ section.strengths {
     /* top, left는 JS에서 인라인으로 제어 */
     width: 3000px;
     height: 3000px;
-    background-color: #FBFEE7;
+    background-color: #FFF8F5;
     border-radius: 50%;
     z-index: 50;
     /* JS override expected, but setting safe default */
@@ -263,6 +263,24 @@ section.strengths {
 
 .final-description.animate-bounce {
     animation: bounceUp 1s cubic-bezier(0.215, 0.610, 0.355, 1.000) forwards;
+}
+
+/* 1334px Responsive Adjustments */
+@media (max-width: 1334px) {
+    .line-2 {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 15px;
+    }
+
+    .highlight-box {
+        margin-right: 0;
+        margin-bottom: 12px;
+    }
+
+    .suffix-text {
+        display: block;
+    }
 }
 
 /* 1024px Responsive Adjustments */
@@ -314,7 +332,8 @@ section.strengths {
 
     .line-2 {
         margin-top: 12px;
-        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: flex-start;
     }
 
     .highlight-box {
@@ -407,12 +426,12 @@ section.strengths {
 
 /* Dynamic Padding Classes */
 .highlight-box {
-    padding: 28px 0;
-    transition: padding 0.2s ease, width 0.1s linear;
+    padding: clamp(20px, 1.46vw, 28px) 0;
+    transition: padding 0.2s ease;
 }
 
 .highlight-box.expanded {
-    padding: 28px 35px;
+    padding: clamp(20px, 1.46vw, 28px) clamp(25px, 1.82vw, 35px);
 }
 
 @media (max-width: 480px) {

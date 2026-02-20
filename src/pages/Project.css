@@ -237,7 +237,7 @@ section.project {
 .grid-item h3 {
     font-size: 20px;
     font-weight: 800;
-    color: #FFCC33;
+    color: #fe7844;
     /* Use accent color for labels */
     margin-bottom: 25px;
     text-transform: uppercase;
@@ -293,7 +293,7 @@ section.project {
 
 .project-btns a:hover {
     opacity: 1;
-    color: #FFCC33;
+    color: #fe7844;
 }
 
 .line-box {
@@ -318,7 +318,7 @@ section.project {
 
 .project-btns a:hover .line-box-fill {
     width: 100%;
-    background: #FFCC33;
+    background: #fe7844;
 }
 
 
@@ -329,7 +329,7 @@ section.project {
     top: 0;
     width: 10px;
     height: 10px;
-    background: #FFCC33;
+    background: #fe7844;
     opacity: 0;
     transition: opacity 0.3s;
 }
@@ -381,7 +381,7 @@ section.project {
     left: 0;
     top: 0;
     height: 100%;
-    background: #FFCC33;
+    background: #fe7844;
 }
 
 .progress-item .percent {

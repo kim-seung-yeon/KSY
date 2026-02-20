@@ -168,13 +168,13 @@
 }
 
 .nav-btn:hover {
-    color: #FFCC33;
-    border-color: #FFCC33;
+    color: #fe7844;
+    border-color: #fe7844;
 }
 
 .nav-btn:hover .char {
     transform: translateY(-100%);
-    color: #FFCC33;
+    color: #fe7844;
 }
 
 /* 스크롤 진행 선 트랙 */
@@ -193,7 +193,7 @@
     left: 0;
     top: 0;
     height: 100%;
-    background: #FFCC33;
+    background: #fe7844;
     width: 0%;
     transition: width 0.1s linear;
 }
@@ -221,8 +221,8 @@
 
 .light-mode .nav-btn:hover,
 .light-mode .nav-btn:hover .char {
-    color: #FFCC33;
-    border-color: #FFCC33;
+    color: #fe7844;
+    border-color: #fe7844;
 }
 
 .light-mode .nav-line-track {
@@ -230,7 +230,7 @@
 }
 
 .light-mode .nav-line-fill {
-    background: #FFCC33;
+    background: #fe7844;
 }
 
 /* Hamburger Menu Button */
@@ -373,12 +373,12 @@
 
     /* 텍스트 색상 노란색 강조도 가능 */
     .nav-container.active .nav-btn:hover .char {
-        color: #FFCC33;
+        color: #fe7844;
     }
 
     .nav-btn:hover {
         /* 아래 코드들은 위 규칙에 통합됨 */
-        color: #FFCC33;
+        color: #fe7844;
     }
 
     .btn-text-clone {
@@ -393,6 +393,6 @@
 
     .nav-btn:hover .char {
         transform: none;
-        color: #FFCC33;
+        color: #fe7844;
     }
 }

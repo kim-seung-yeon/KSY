@@ -44,7 +44,7 @@
 .question-header p {
     font-size: clamp(18px, 0.94vw, 22px);
     line-height: 1.6;
-    color: #D6A42E;
+    color: #fe7844;
     /* Gold/Yellowish accent similar to many premium dark folios */
     font-weight: 500;
 }
@@ -61,8 +61,8 @@
 }
 
 .q-card {
-    width: 864px;
-    /* Increased width */
+    width: 90vw;
+    max-width: 864px;
     height: 540px;
     background-color: #F3F1E8;
     color: #010101;

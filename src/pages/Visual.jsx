@@ -19,12 +19,12 @@ const Visual = () => {
 
         const timer = setTimeout(() => setIsVisible(true), 100);
         const textTimer = setTimeout(() => setIsTextVisible(true), 1500);
-        const assembleTimer = setTimeout(() => setIsAssembled(true), 3500);
+        const assembleTimer = setTimeout(() => setIsAssembled(true), 3000);
 
         document.body.style.overflow = 'hidden';
         const unlockTimer = setTimeout(() => {
             document.body.style.overflow = 'auto';
-        }, 4000);
+        }, 3600);
 
         return () => {
             clearTimeout(timer);

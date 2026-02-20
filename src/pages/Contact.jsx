@@ -109,7 +109,7 @@ const Contact = () => {
                             width="100%"
                             height={`${progress * 100}%`}
                             y={`${100 - (progress * 100)}%`}
-                            fill="#FBFEE7"
+                            fill="#FFF8F5"
                             mask="url(#text-mask)"
                         />
                     </svg>

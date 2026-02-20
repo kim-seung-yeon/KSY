@@ -60,12 +60,12 @@ body {
         clip-path: inset(0 0 100% 0);
         opacity: 0;
         background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 1) 15%, rgba(255, 255, 255, 1) 85%, transparent);
-        filter: brightness(2) blur(1px) drop-shadow(0 0 8px rgba(255, 204, 51, 0.4));
+        filter: brightness(2) blur(1px) drop-shadow(0 0 8px rgba(254, 120, 68, 0.4));
     }
 
     30% {
         opacity: 1;
-        background: linear-gradient(to bottom, transparent, rgba(255, 250, 205, 1) 15%, rgba(255, 250, 205, 1) 85%, transparent);
+        background: linear-gradient(to bottom, transparent, rgba(255, 235, 200, 1) 15%, rgba(255, 235, 200, 1) 85%, transparent);
     }
 
     100% {
@@ -81,12 +81,12 @@ body {
         clip-path: inset(0 100% 0 0);
         opacity: 0;
         background: linear-gradient(to right, transparent, rgba(255, 255, 255, 1) 15%, rgba(255, 255, 255, 1) 85%, transparent);
-        filter: brightness(2) blur(1px) drop-shadow(0 0 8px rgba(255, 204, 51, 0.4));
+        filter: brightness(2) blur(1px) drop-shadow(0 0 8px rgba(254, 120, 68, 0.4));
     }
 
     30% {
         opacity: 1;
-        background: linear-gradient(to right, transparent, rgba(255, 250, 205, 1) 15%, rgba(255, 250, 205, 1) 85%, transparent);
+        background: linear-gradient(to right, transparent, rgba(255, 235, 200, 1) 15%, rgba(255, 235, 200, 1) 85%, transparent);
     }
 
     100% {
@@ -208,9 +208,9 @@ body {
     position: absolute;
     overflow: hidden;
     /* Hide-and-seek boundary */
-    transition: transform 1s cubic-bezier(0.19, 1, 0.22, 1),
-        top 1s cubic-bezier(0.19, 1, 0.22, 1),
-        left 1s cubic-bezier(0.19, 1, 0.22, 1);
+    transition: transform 0.4s cubic-bezier(0.19, 1, 0.22, 1),
+        top 0.4s cubic-bezier(0.19, 1, 0.22, 1),
+        left 0.4s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 /* Masks at their permanent X-positions to avoid horizontal move */
@@ -232,8 +232,8 @@ body {
 .f-mask {
     left: 930px;
     width: 400px;
-    /* Increased to prevent clipping of wide 'f' */
-    top: 100px;
+    /* Adjusted top to match vertical travel distance of P */
+    top: -40px;
     height: 450px;
 }
 
@@ -255,9 +255,9 @@ body {
 
 .text-fragment {
     position: absolute;
-    color: #FFFAE0;
+    color: #FFF5E0;
     /* Subtle warm white */
-    text-shadow: 0 0 20px rgba(255, 204, 51, 0.25);
+    text-shadow: 0 0 20px rgba(254, 120, 68, 0.25);
     /* Subtle yellow glow */
     white-space: nowrap;
     width: max-content;
@@ -276,8 +276,8 @@ body {
     top: 40px;
     /* Fixed top to prevent jump */
     font-size: 360px;
-    transform: translateY(100%);
-    transition: transform 1s 1.5s cubic-bezier(0.19, 1, 0.22, 1), opacity 0.1s 1.5s ease;
+    transform: translateY(400px);
+    transition: transform 1s 1.2s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.1s 1.2s ease;
 }
 
 .active .p-char {
@@ -290,8 +290,8 @@ body {
     left: -60px;
     top: -60px;
     font-size: 190px;
-    transform: translateY(-100%);
-    transition: transform 1s 1.7s cubic-bezier(0.19, 1, 0.22, 1), opacity 0.1s 1.7s ease;
+    transform: translateY(-400px);
+    transition: transform 0.7s 1.4s cubic-bezier(0.19, 1, 0.22, 1), opacity 0.1s 1.4s ease;
 }
 
 .active .ort-chars {
@@ -305,8 +305,8 @@ body {
     top: 160px;
     /* Fixed top to prevent jump */
     font-size: 240px;
-    transform: translateY(100%);
-    transition: transform 1s 1.9s cubic-bezier(0.19, 1, 0.22, 1), opacity 0.1s 1.9s ease;
+    transform: translateY(400px);
+    transition: transform 1s 1.2s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.1s 1.2s ease;
 }
 
 .active .f-char {
@@ -319,8 +319,8 @@ body {
     left: -60px;
     top: -60px;
     font-size: 190px;
-    transform: translateY(-100%);
-    transition: transform 1s 2.1s cubic-bezier(0.19, 1, 0.22, 1), opacity 0.1s 2.1s ease;
+    transform: translateY(-400px);
+    transition: transform 0.7s 1.6s cubic-bezier(0.19, 1, 0.22, 1), opacity 0.1s 1.6s ease;
 }
 
 .active .olio-chars {
@@ -333,8 +333,8 @@ body {
     left: -60px;
     top: -60px;
     font-size: 190px;
-    transform: translateY(-100%);
-    transition: transform 1s 2.3s cubic-bezier(0.19, 1, 0.22, 1), opacity 0.1s 2.3s ease;
+    transform: translateY(-400px);
+    transition: transform 0.7s 1.8s cubic-bezier(0.19, 1, 0.22, 1), opacity 0.1s 1.8s ease;
 }
 
 .active .star-char {
@@ -357,27 +357,32 @@ body {
 /* Keep same Left values to ensure ZERO horizontal movement */
 .assembled .p-mask {
     left: 490px;
-    top: 290px;
+    top: 370px;
+    /* Lowered from 340px */
 }
 
 .assembled .ort-mask {
     left: 650px;
-    top: 390px;
+    top: 440px;
+    /* Lowered from 390px */
 }
 
 .assembled .f-mask {
     left: 930px;
-    top: 320px;
+    top: 400px;
+    /* Lowered from 370px */
 }
 
 .assembled .olio-mask {
     left: 980px;
-    top: 390px;
+    top: 440px;
+    /* Lowered from 390px */
 }
 
 .assembled .star-mask {
     left: 1300px;
-    top: 390px;
+    top: 440px;
+    /* Lowered from 390px */
 }
 
 /* Shimmer Animation */
@@ -396,13 +401,13 @@ body {
     left: -60px !important;
     /* Offset the 60px padding */
     transform: none !important;
-    transition: transform 1s cubic-bezier(0.19, 1, 0.22, 1),
-        top 1s cubic-bezier(0.19, 1, 0.22, 1),
-        left 1s cubic-bezier(0.19, 1, 0.22, 1),
-        opacity 1s ease;
+    transition: transform 0.4s cubic-bezier(0.19, 1, 0.22, 1),
+        top 0.4s cubic-bezier(0.19, 1, 0.22, 1),
+        left 0.4s cubic-bezier(0.19, 1, 0.22, 1),
+        opacity 0.4s ease;
 
     /* Silver Shimmer (Once) */
-    background: linear-gradient(90deg, #FFFAE0 0%, #FFFFFF 50%, #FFFAE0 100%);
+    background: linear-gradient(90deg, #FFF5E0 0%, #FFFFFF 50%, #FFF5E0 100%);
     background-size: 200% auto;
     background-clip: text;
     -webkit-background-clip: text;
@@ -416,7 +421,7 @@ body {
 .assembled .p-char,
 .assembled .f-char {
     /* Gold Shimmer (Once) */
-    background: linear-gradient(90deg, #FFCC33 0%, #FFF5CC 50%, #FFCC33 100%);
+    background: linear-gradient(90deg, #fe7844 0%, #FFE8D0 50%, #fe7844 100%);
     background-size: 200% auto;
     background-clip: text;
     -webkit-background-clip: text;
@@ -424,7 +429,7 @@ body {
     animation: shine 3s linear 1;
 
     /* Moderate Gold Glow */
-    text-shadow: 0 0 20px rgba(255, 204, 51, 0.6);
+    text-shadow: 0 0 20px rgba(254, 120, 68, 0.6);
 }
 
 /* Fonts */
@@ -465,11 +470,13 @@ body {
     }
 
     .assembled .p-mask {
-        top: 320px;
+        top: 350px;
+        /* Reduced climb */
     }
 
     .assembled .f-mask {
-        top: 300px;
+        top: 330px;
+        /* Reduced climb */
     }
 
     .assembled .ort-mask,
@@ -504,11 +511,11 @@ body {
     }
 
     .assembled .p-mask {
-        top: 330px;
+        top: 360px;
     }
 
     .assembled .f-mask {
-        top: 310px;
+        top: 340px;
     }
 
     .assembled .ort-mask,
@@ -544,11 +551,11 @@ body {
     }
 
     .assembled .p-mask {
-        top: 340px;
+        top: 370px;
     }
 
     .assembled .f-mask {
-        top: 320px;
+        top: 350px;
     }
 
     .assembled .ort-mask,

@@ -77,10 +77,10 @@ const Question = () => {
 
         // Background Color Logic
         let backgroundColor = '#F3F1E8'; // Default
-        if (index === 0 && smoothProgress > 0.95) {
-            backgroundColor = '#CFCABC';
-        } else if (index === 1 && smoothProgress > 0.95) {
-            backgroundColor = '#E4E0D0';
+        if (smoothProgress > 0.95) {
+            if (index === 0) backgroundColor = '#DBC4B5';
+            else if (index === 1) backgroundColor = '#EDE0D4';
+            else if (index === 2) backgroundColor = '#FFF4EB';
         }
 
         return {
