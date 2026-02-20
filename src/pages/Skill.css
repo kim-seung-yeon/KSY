@@ -109,7 +109,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    border: clamp(1px, 0.15vw, 2px) solid #FE7844;
+    border: clamp(1px, 0.15vw, 2px) solid #FBFEE7;
     border-radius: clamp(10px, 1.5vw, 20px);
     box-sizing: border-box;
     padding: 10px;
@@ -118,7 +118,7 @@
 }
 
 .skill-box span {
-    color: #FE7844;
+    color: #FBFEE7;
     font-size: clamp(10px, 1vw, 15px);
     font-weight: 800;
     font-family: 'Neue Montreal', sans-serif;
@@ -126,7 +126,7 @@
 }
 
 .skill-icon:hover .skill-box {
-    background-color: #FE7844;
+    background-color: #FBFEE7;
 }
 
 .skill-icon:hover .skill-box span {

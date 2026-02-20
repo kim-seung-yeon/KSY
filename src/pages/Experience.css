@@ -50,9 +50,9 @@ section.experience {
 
 .exp-subtitle {
     font-size: clamp(12px, 0.94vw, 18px);
-    color: #fe7844;
+    color: #FFCC33;
     margin: 0;
-    border-bottom: 2px solid #fe7844;
+    border-bottom: 2px solid #FFCC33;
     padding-bottom: 5px;
     /* Initial state */
     opacity: 0;
@@ -64,7 +64,7 @@ section.experience {
 .exp-square-dot {
     width: clamp(4px, 0.4vw, 8px);
     height: clamp(4px, 0.4vw, 8px);
-    background-color: #fe7844;
+    background-color: #FFCC33;
     margin-left: clamp(2px, 0.2vw, 4px);
     /* Aligns the vertical center of the box with the 2px border */
     margin-bottom: calc(-1 * (clamp(4px, 0.4vw, 8px) / 2) + 1px);
@@ -380,7 +380,7 @@ section.experience {
     .exp-subtitle {
         font-size: 13px;
         padding-bottom: 5px;
-        border-bottom: 1.5px solid #fe7844;
+        border-bottom: 1.5px solid #FFCC33;
     }
 
     .exp-subtitle-wrapper {

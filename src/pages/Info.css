@@ -52,7 +52,7 @@ p {
 
 /* 박스 */
 .box {
-    background: #fe7844;
+    background: #FFCC33;
     position: absolute;
 }
 
@@ -162,7 +162,7 @@ p {
 
 .bottom .text .title i {
     font-style: italic;
-    color: #fe7844;
+    color: #FFCC33;
 }
 
 /* text-box 공통 간격 */

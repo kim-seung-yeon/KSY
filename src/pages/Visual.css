@@ -60,7 +60,7 @@ body {
         clip-path: inset(0 0 100% 0);
         opacity: 0;
         background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 1) 15%, rgba(255, 255, 255, 1) 85%, transparent);
-        filter: brightness(2) blur(1px) drop-shadow(0 0 8px rgba(254, 120, 68, 0.4));
+        filter: brightness(2) blur(1px) drop-shadow(0 0 8px rgba(255, 204, 51, 0.4));
     }
 
     30% {
@@ -81,7 +81,7 @@ body {
         clip-path: inset(0 100% 0 0);
         opacity: 0;
         background: linear-gradient(to right, transparent, rgba(255, 255, 255, 1) 15%, rgba(255, 255, 255, 1) 85%, transparent);
-        filter: brightness(2) blur(1px) drop-shadow(0 0 8px rgba(254, 120, 68, 0.4));
+        filter: brightness(2) blur(1px) drop-shadow(0 0 8px rgba(255, 204, 51, 0.4));
     }
 
     30% {
@@ -216,7 +216,8 @@ body {
 /* Masks at their permanent X-positions to avoid horizontal move */
 .p-mask {
     left: 490px;
-    width: 600px;
+    width: 1000px;
+    /* Increased from 600px to prevent clipping wide flourishes */
     top: 130px;
     /* Lowered from 50px */
     height: 600px;
@@ -233,7 +234,8 @@ body {
 
 .f-mask {
     left: 930px;
-    width: 400px;
+    width: 600px;
+    /* Increased from 400px */
     /* Adjusted top to match vertical travel distance of P */
     top: 40px;
     /* Lowered from -40px */
@@ -262,14 +264,14 @@ body {
     position: absolute;
     color: #FFF5E0;
     /* Subtle warm white */
-    text-shadow: 0 0 20px rgba(254, 120, 68, 0.25);
+    text-shadow: 0 0 20px rgba(255, 204, 51, 0.25);
     /* Subtle yellow glow */
     white-space: nowrap;
     width: max-content;
     opacity: 0;
     will-change: transform, opacity;
-    padding: 60px;
-    /* Added padding to prevent clipping of flourishes */
+    padding: 100px;
+    /* Increased from 60px to prevent clipping of large flourishes/shadows */
 }
 
 /* --- REVEAL: PURE VERTICAL ONLY --- */
@@ -277,7 +279,8 @@ body {
 
 /* P: Slide UP into mask */
 .p-char {
-    left: -60px;
+    left: -100px;
+    /* Match new padding to align properly */
     top: 40px;
     /* Fixed top to prevent jump */
     font-size: 360px;
@@ -292,7 +295,7 @@ body {
 
 /* ort: Slide DOWN into mask */
 .ort-chars {
-    left: -60px;
+    left: -100px;
     top: -60px;
     font-size: 190px;
     transform: translateY(-400px);
@@ -306,7 +309,7 @@ body {
 
 /* f: Slide UP into mask */
 .f-char {
-    left: -60px;
+    left: -100px;
     top: 160px;
     /* Fixed top to prevent jump */
     font-size: 240px;
@@ -321,7 +324,7 @@ body {
 
 /* olio: Slide DOWN into mask */
 .olio-chars {
-    left: -60px;
+    left: -100px;
     top: -60px;
     font-size: 190px;
     transform: translateY(-400px);
@@ -335,7 +338,7 @@ body {
 
 /* star: Slide DOWN into mask */
 .star-char {
-    left: -60px;
+    left: -100px;
     top: -60px;
     font-size: 190px;
     transform: translateY(-400px);
@@ -403,21 +406,16 @@ body {
 
 .assembled .text-fragment {
     top: 0 !important;
-    left: -60px !important;
-    /* Offset the 60px padding */
+    left: -100px !important;
+    /* Offset the 100px padding */
     transform: none !important;
     transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1),
         top 0.6s cubic-bezier(0.23, 1, 0.32, 1),
         left 0.6s cubic-bezier(0.23, 1, 0.32, 1),
         opacity 0.6s ease;
 
-    /* Silver Shimmer (Once) */
-    background: linear-gradient(90deg, #FFF5E0 0%, #FFFFFF 50%, #FFF5E0 100%);
-    background-size: 200% auto;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: shine 3s linear 1;
+    /* Solid Color instead of Shimmer */
+    color: #FFF5E0;
 
     /* Subtle Glow */
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
@@ -425,16 +423,12 @@ body {
 
 .assembled .p-char,
 .assembled .f-char {
-    /* Gold Shimmer (Once) */
-    background: linear-gradient(90deg, #fe7844 0%, #FFE8D0 50%, #fe7844 100%);
-    background-size: 200% auto;
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: shine 3s linear 1;
+    /* Solid Accent Color */
+    color: #FFCC33;
+    -webkit-text-fill-color: #FFCC33;
 
-    /* Moderate Gold Glow */
-    text-shadow: 0 0 20px rgba(254, 120, 68, 0.6);
+    /* Moderate Accent Glow */
+    text-shadow: 0 0 20px rgba(255, 204, 51, 0.6);
 }
 
 /* Fonts */

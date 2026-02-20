@@ -54,10 +54,10 @@
 
 .clone-subtitle {
     font-size: 16px;
-    color: #fe7844;
+    color: #FFCC33;
     margin: 0;
     padding-bottom: 10px;
-    border-bottom: 2px solid #fe7844;
+    border-bottom: 2px solid #FFCC33;
     display: inline-block;
     padding-right: 5px;
     opacity: 0;
@@ -69,7 +69,7 @@
 .clone-square-dot {
     width: 8px;
     height: 8px;
-    background-color: #fe7844;
+    background-color: #FFCC33;
     transform: translateY(-5px);
     margin-top: 36px;
     opacity: 0;
@@ -189,7 +189,7 @@
 
 .click-btn:hover {
     opacity: 1;
-    color: #fe7844;
+    color: #FFCC33;
 }
 
 .btn-line {
@@ -198,7 +198,7 @@
     left: 0;
     width: 0;
     height: 1.5px;
-    background: #fe7844;
+    background: #FFCC33;
     transition: width 0.2s ease;
 }
 
@@ -209,7 +209,7 @@
     top: -4px;
     width: 10px;
     height: 10px;
-    background: #fe7844;
+    background: #FFCC33;
     opacity: 0;
     transition: opacity 0.3s;
 }
@@ -355,7 +355,7 @@
     .clone-subtitle {
         font-size: 13px;
         padding-bottom: 6px;
-        border-bottom: 1.5px solid #fe7844;
+        border-bottom: 1.5px solid #FFCC33;
     }
 
     .clone-square-dot {

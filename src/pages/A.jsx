@@ -73,7 +73,7 @@ const A = () => {
             members: "총 6명 (Team Project)",
             period: "2025.11.25 ~ 2025.12.29",
             role: "기획, 서브페이지 디자인 및 퍼블리싱",
-            color: "#fe7844",
+            color: "#FFCC33",
             // video: papa_video,
             planUrl: "https://www.figma.com/proto/qfe5do0OqwaHThxOBESAxa/%ED%8F%AC%ED%8F%B4-%EB%A7%81%ED%81%AC?node-id=1-3652&t=ZRitH56l7g3hAUWh-1",
             websiteUrl: "https://solsol3318.github.io/ssol/"
@@ -95,7 +95,7 @@ const A = () => {
             members: "총 7명 (Team Project)",
             period: "2026.01.02 ~ 2026.01.25",
             role: "기획, 팀드라이버 페이지 디자인 및 퍼블리싱",
-            color: "#fe7844",
+            color: "#FFCC33",
             planUrl: "https://www.figma.com/proto/qfe5do0OqwaHThxOBESAxa/%ED%8F%AC%ED%8F%B4-%EB%A7%81%ED%81%AC?node-id=1-377&t=ZRitH56l7g3hAUWh-1",
             websiteUrl: "https://force1-five.vercel.app/onboarding"
         },
@@ -115,7 +115,7 @@ const A = () => {
             members: "1명 (Personal Project)",
             period: "2025.10.13 ~ 2025.11.24",
             role: "1인 기획, 디자인, 퍼블리싱",
-            color: "#fe7844",
+            color: "#FFCC33",
             planUrl: "https://www.figma.com/proto/qfe5do0OqwaHThxOBESAxa/%ED%8F%AC%ED%8F%B4-%EB%A7%81%ED%81%AC?node-id=37-1618&t=9FYb5DVv9oaH5irG-1",
             websiteUrl: null,
             prototypeUrl: "https://www.figma.com/proto/qfe5do0OqwaHThxOBESAxa/%ED%8F%AC%ED%8F%B4-%EB%A7%81%ED%81%AC?node-id=8-810&t=SRGvjpr37gHeYyXd-1"

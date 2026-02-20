@@ -182,7 +182,7 @@ section.strengths {
     max-width: 100%;
     overflow: hidden;
     border: none;
-    background: rgba(254, 120, 68, 0.4);
+    background: rgba(255, 204, 51, 0.4);
     white-space: nowrap;
     box-sizing: border-box;
     margin-right: 20px;
@@ -196,7 +196,7 @@ section.strengths {
     top: 0;
     width: var(--line-width, 4px);
     height: 100%;
-    background-color: #fe7844;
+    background-color: #FFCC33;
     transition: width 0.1s linear;
     /* 스크롤 반응성 향상 */
     z-index: 3;
@@ -210,7 +210,7 @@ section.strengths {
     top: 0;
     width: var(--line-width, 4px);
     height: 100%;
-    background-color: #fe7844;
+    background-color: #FFCC33;
     transition: width 0.1s linear;
     z-index: 3;
 }
