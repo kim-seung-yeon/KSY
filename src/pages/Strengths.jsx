@@ -17,7 +17,26 @@ const Strengths = () => {
         }
         handleResize()
         window.addEventListener('resize', handleResize)
-        return () => window.removeEventListener('resize', handleResize)
+
+        // 폰트 로드 후 정확한 텍스트 가로 길이 재계산 (박스 다 안 펼쳐지는 현상 방지)
+        document.fonts.ready.then(handleResize)
+
+        // 레이아웃 변경 대비 요소 렌더링 후 재계산
+        const timer = setTimeout(handleResize, 500)
+        const timer2 = setTimeout(handleResize, 1500)
+
+        let observer;
+        if (window.ResizeObserver && textRef.current) {
+            observer = new ResizeObserver(() => handleResize());
+            observer.observe(textRef.current);
+        }
+
+        return () => {
+            window.removeEventListener('resize', handleResize)
+            clearTimeout(timer)
+            clearTimeout(timer2)
+            if (observer) observer.disconnect()
+        }
     }, [])
 
     useEffect(() => {
@@ -44,8 +63,8 @@ const Strengths = () => {
     }, [])
 
     // 1. 단어들(top-1 ~ bottom-6)이 먼저 순차적으로 등장 (0.05 ~ 0.25 구간)
-    // 2. 그 다음 h2 박스 모션 진행 (0.35 ~ 0.55 구간)
-    const boxProgress = Math.min(Math.max((progress - 0.35) / 0.2, 0), 1)
+    // 2. 그 다음 h2 박스 모션 진행 (0.28 ~ 0.65 구간으로 길게 늘려 충분히 펼쳐지도록 함)
+    const boxProgress = Math.min(Math.max((progress - 0.28) / 0.37, 0), 1)
 
     // 3. h2 모션 후 '약 0.5 정도의 시간적/스크롤 여유'를 둠 (0.55 ~ 0.75 구간은 대기)
 
