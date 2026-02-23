@@ -243,8 +243,8 @@ p {
 
 .bottom .text .text-line {
     width: 100%;
-    height: 0.5px;
-    background: #fff;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.5);
     margin-top: 10px;
 }
 
