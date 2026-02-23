@@ -193,7 +193,7 @@ function Info() {
                                         </div>
                                         <div className="skill-item">
                                             <p>ILLUSTRATOR</p>
-                                            <span>로고 및 일러스트 디자인</span>
+                                            <span>기본적인 툴 활용 및 간단한 아이콘 제작</span>
                                         </div>
                                         <div className="skill-item">
                                             <p>FIGMA</p>
@@ -212,7 +212,6 @@ function Info() {
                                             <span>사용자 인터랙션 및 화면 동작 구현</span>
                                         </div>
                                     </div>
-
                                 </div>
                             </div>
                         </div>
