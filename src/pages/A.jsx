@@ -127,6 +127,10 @@ const A = () => {
             members: "1명 (Personal Project)",
             period: "2025.10.13 ~ 2025.11.24",
             role: "1인 기획, 디자인, 퍼블리싱",
+            roleDetails: [
+                { label: "Planning", desc: "데스크 리서치 및 경쟁사 분석, 서비스 목표 및 핵심 기능 정의" },
+                { label: "Design", desc: "유저 플로우(User Flow) 및 IA 설계, BI(로고) 제작, 전체 UI 및 그래픽 디자인" }
+            ],
             color: "#FFCC33",
             planUrl: "https://www.figma.com/proto/qfe5do0OqwaHThxOBESAxa/%ED%8F%AC%ED%8F%B4-%EB%A7%81%ED%81%AC?node-id=37-1618&t=9FYb5DVv9oaH5irG-1",
             websiteUrl: null,
