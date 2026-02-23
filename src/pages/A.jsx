@@ -243,17 +243,11 @@ const A = () => {
                                                 <p>{selectedCard.overview}</p>
                                             </div>
 
-                                            <div className="grid-item process-role">
+                                            <div className="grid-item process">
                                                 <div className="process-block">
                                                     <h3>PROCESS</h3>
                                                     <p>{selectedCard.process}</p>
                                                 </div>
-                                                {!selectedCard.roleDetails && (
-                                                    <div className="role-block">
-                                                        <h3>ROLE</h3>
-                                                        <p>{selectedCard.role}</p>
-                                                    </div>
-                                                )}
                                             </div>
 
                                             <div className="grid-item meta-group">
@@ -271,7 +265,22 @@ const A = () => {
                                                 </div>
                                             </div>
 
-                                            {selectedCard.roleDetails && (
+                                            <div className="grid-item contribution">
+                                                <h3>Contribution</h3>
+                                                <div className="progress-group">
+                                                    {selectedCard.contribution.map((item, idx) => (
+                                                        <div className="progress-item" key={idx}>
+                                                            <span className="label">{item.label}</span>
+                                                            <div className="bar-bg">
+                                                                <div className="bar-fill" style={{ width: item.value }}></div>
+                                                            </div>
+                                                            <span className="percent">{item.value}</span>
+                                                        </div>
+                                                    ))}
+                                                </div>
+                                            </div>
+
+                                            {selectedCard.roleDetails ? (
                                                 <div className="grid-item role-details">
                                                     <h3>ROLE DETAILS</h3>
                                                     <div className="role-details-list">
@@ -283,25 +292,15 @@ const A = () => {
                                                         ))}
                                                     </div>
                                                 </div>
+                                            ) : (
+                                                <div className="grid-item role-details">
+                                                    <h3>ROLE</h3>
+                                                    <p>{selectedCard.role}</p>
+                                                </div>
                                             )}
                                         </div>
 
-                                        <div className="contribution-layout">
-                                            <div className="grid-item contribution">
-                                                <h3>Contribution</h3>
-                                                <div className="progress-group">
-                                                    {selectedCard.contribution.map((item, idx) => (
-                                                        <div className="progress-item" key={idx}>
-                                                            <span>{item.label}</span>
-                                                            <div className="bar-bg">
-                                                                <div className="bar-fill" style={{ width: item.value }}></div>
-                                                            </div>
-                                                            <span className="percent">{item.value}</span>
-                                                        </div>
-                                                    ))}
-                                                </div>
-                                            </div>
-                                        </div>
+
 
                                         <div className="project-btns">
                                             <a
