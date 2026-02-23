@@ -73,6 +73,12 @@ const A = () => {
             members: "총 6명 (Team Project)",
             period: "2025.11.25 ~ 2025.12.29",
             role: "기획, 서브페이지 디자인 및 퍼블리싱",
+            roleDetails: [
+                { label: "Planning", desc: "데스크 리서치 및 현황 분석을 통한 사용자 인사이트 도출 및 AS-IS/TO-BE 전략 수립" },
+                { label: "Design", desc: "무드보드 제작 및 컨셉 정의를 통한 서브 페이지 UI 디자인 (Figma)" },
+                { label: "Publishing", desc: "React 기반의 서브 페이지 웹 퍼블리싱 및 HTML/CSS 화면 구현" },
+                { label: "Communication", desc: "기획 전체 스토리라인 설계 및 프로젝트 최종 PT 진행" }
+            ],
             color: "#FFCC33",
             // video: papa_video,
             planUrl: "https://www.figma.com/proto/qfe5do0OqwaHThxOBESAxa/%ED%8F%AC%ED%8F%B4-%EB%A7%81%ED%81%AC?node-id=1-3652&t=ZRitH56l7g3hAUWh-1",
