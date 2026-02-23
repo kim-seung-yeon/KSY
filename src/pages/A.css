@@ -541,7 +541,8 @@
 }
 
 .role-detail-item strong {
-    color: #FFCC33;
+    color: #ffffff;
+    font-weight: bold;
     font-size: clamp(14px, 1.2vw, 16px);
     letter-spacing: 0.5px;
 }
