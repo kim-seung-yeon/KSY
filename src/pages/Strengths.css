@@ -10,8 +10,8 @@
 section.strengths {
     background: transparent;
     width: 100%;
-    height: 500vh;
-    /* min-height에서 fixed height로 변경하여 스크롤 영역 명확화 */
+    height: 800vh;
+    /* Increased height from 500vh to 800vh to slow down scroll animations */
     position: relative;
     /* overflow: hidden;  sticky가 작동하려면 부모에 overflow: hidden이 없어야 하는 경우가 많지만, 
        여기서는 body 스크롤을 쓰므로 section 자체의 overflow는 sticky에 영향주지 않음. 
@@ -310,7 +310,7 @@ section.strengths {
 /* 768px Tablet Responsive Adjustments */
 @media (max-width: 768px) {
     section.strengths {
-        height: 400vh;
+        height: 600vh;
     }
 
     .motion-area {
@@ -350,7 +350,7 @@ section.strengths {
 /* 480px Mobile Responsive Adjustments */
 @media (max-width: 480px) {
     section.strengths {
-        height: 350vh;
+        height: 500vh;
     }
 
     .motion-area {
