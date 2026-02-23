@@ -252,12 +252,8 @@ const A = () => {
 
                                             <div className="grid-item meta-group">
                                                 <div className="meta-block">
-                                                    <h3>PARTICIPANTS</h3>
-                                                    <p>{selectedCard.members}</p>
-                                                </div>
-                                                <div className="meta-block">
-                                                    <h3>PERIOD</h3>
-                                                    <p>{selectedCard.period}</p>
+                                                    <h3>TEAM & PERIOD</h3>
+                                                    <p>{selectedCard.members} &nbsp;|&nbsp; {selectedCard.period}</p>
                                                 </div>
                                                 <div className="meta-block">
                                                     <h3>TOOL</h3>
