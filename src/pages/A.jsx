@@ -95,6 +95,12 @@ const A = () => {
             members: "총 7명 (Team Project)",
             period: "2026.01.02 ~ 2026.01.25",
             role: "기획, 팀드라이버 페이지 디자인 및 퍼블리싱",
+            roleDetails: [
+                { label: "Planning", desc: "데스크 리서치 기반 UX 인사이트 도출 및 AS-IS/TO-BE 전략 수립" },
+                { label: "Design", desc: "메인 레이아웃 설계 및 Team & Driver 페이지 UI 디자인 (Figma)" },
+                { label: "Publishing", desc: "HTML/CSS/JS 활용 반응형 웹 구현 및 React 컴포넌트 설계" },
+                { label: "Communication", desc: "프로젝트 전체 스토리라인 기획 및 최종 PT 진행" }
+            ],
             color: "#FFCC33",
             planUrl: "https://www.figma.com/proto/qfe5do0OqwaHThxOBESAxa/%ED%8F%AC%ED%8F%B4-%EB%A7%81%ED%81%AC?node-id=1-377&t=ZRitH56l7g3hAUWh-1",
             websiteUrl: "https://force1-five.vercel.app/onboarding"
@@ -237,30 +243,17 @@ const A = () => {
                                                 <p>{selectedCard.overview}</p>
                                             </div>
 
-                                            <div className="grid-item contribution">
-                                                <h3>Contribution</h3>
-                                                <div className="progress-group">
-                                                    {selectedCard.contribution.map((item, idx) => (
-                                                        <div className="progress-item" key={idx}>
-                                                            <span>{item.label}</span>
-                                                            <div className="bar-bg">
-                                                                <div className="bar-fill" style={{ width: item.value }}></div>
-                                                            </div>
-                                                            <span className="percent">{item.value}</span>
-                                                        </div>
-                                                    ))}
-                                                </div>
-                                            </div>
-
                                             <div className="grid-item process-role">
                                                 <div className="process-block">
                                                     <h3>PROCESS</h3>
                                                     <p>{selectedCard.process}</p>
                                                 </div>
-                                                <div className="role-block">
-                                                    <h3>ROLE</h3>
-                                                    <p>{selectedCard.role}</p>
-                                                </div>
+                                                {!selectedCard.roleDetails && (
+                                                    <div className="role-block">
+                                                        <h3>ROLE</h3>
+                                                        <p>{selectedCard.role}</p>
+                                                    </div>
+                                                )}
                                             </div>
 
                                             <div className="grid-item meta-group">
@@ -275,6 +268,37 @@ const A = () => {
                                                 <div className="meta-block">
                                                     <h3>TOOL</h3>
                                                     <p>{selectedCard.tools}</p>
+                                                </div>
+                                            </div>
+
+                                            {selectedCard.roleDetails && (
+                                                <div className="grid-item role-details">
+                                                    <h3>ROLE DETAILS</h3>
+                                                    <div className="role-details-list">
+                                                        {selectedCard.roleDetails.map((detail, idx) => (
+                                                            <div className="role-detail-item" key={idx}>
+                                                                <strong>{detail.label}</strong>
+                                                                <p>{detail.desc}</p>
+                                                            </div>
+                                                        ))}
+                                                    </div>
+                                                </div>
+                                            )}
+                                        </div>
+
+                                        <div className="contribution-layout">
+                                            <div className="grid-item contribution">
+                                                <h3>Contribution</h3>
+                                                <div className="progress-group">
+                                                    {selectedCard.contribution.map((item, idx) => (
+                                                        <div className="progress-item" key={idx}>
+                                                            <span>{item.label}</span>
+                                                            <div className="bar-bg">
+                                                                <div className="bar-fill" style={{ width: item.value }}></div>
+                                                            </div>
+                                                            <span className="percent">{item.value}</span>
+                                                        </div>
+                                                    ))}
                                                 </div>
                                             </div>
                                         </div>
